@@ -78,6 +78,9 @@ int main() {
         if(frame.empty())
             break;
 
+        // Resize the frame
+        resize(frame, frame, Size(), 0.70, 0.70, INTER_AREA);
+
         histImage = calHistImage(frame);
 
         imshow(widowName0, frame);
